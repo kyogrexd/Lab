@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ag-x7-IRT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--矩陣相乘-->
+        <scene sceneID="F9W-il-tDw">
+            <objects>
+                <viewController id="MhO-fa-9eT" customClass="matrixCountVC" customModule="Lab8_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="No6-sP-pGg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陣列１" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="bKe-Ia-L6Y">
+                                <rect key="frame" x="0.0" y="64" width="207" height="207"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bKe-Ia-L6Y" secondAttribute="height" id="cSN-eG-Kqa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陣列２" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aJP-1K-2md">
+                                <rect key="frame" x="207" y="64" width="207" height="207"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aJP-1K-2md" secondAttribute="height" id="jad-5m-qhk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相乘結果" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ndK-XK-2f0">
+                                <rect key="frame" x="0.0" y="271" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ndK-XK-2f0" secondAttribute="height" id="Zdd-4l-8iv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZH-AQ-eKH">
+                                <rect key="frame" x="146" y="685" width="123" height="30"/>
+                                <state key="normal" title="產生兩矩陣並相乘"/>
+                                <connections>
+                                    <action selector="createMatrix:" destination="MhO-fa-9eT" eventType="touchUpInside" id="1lV-Jg-btZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ndK-XK-2f0" firstAttribute="top" secondItem="bKe-Ia-L6Y" secondAttribute="bottom" id="3c0-r8-Ptg"/>
+                            <constraint firstItem="ePj-sU-evL" firstAttribute="trailing" secondItem="ndK-XK-2f0" secondAttribute="trailing" id="8km-oQ-ipb"/>
+                            <constraint firstItem="nZH-AQ-eKH" firstAttribute="top" secondItem="ndK-XK-2f0" secondAttribute="bottom" id="MaK-hC-rwv"/>
+                            <constraint firstItem="ePj-sU-evL" firstAttribute="trailing" secondItem="aJP-1K-2md" secondAttribute="trailing" id="NFo-pC-BKf"/>
+                            <constraint firstItem="ndK-XK-2f0" firstAttribute="leading" secondItem="ePj-sU-evL" secondAttribute="leading" id="O4c-UY-fGk"/>
+                            <constraint firstItem="aJP-1K-2md" firstAttribute="top" secondItem="ePj-sU-evL" secondAttribute="top" constant="20" id="PC0-ux-GIf"/>
+                            <constraint firstItem="bKe-Ia-L6Y" firstAttribute="leading" secondItem="ePj-sU-evL" secondAttribute="leading" id="UKA-mt-enC"/>
+                            <constraint firstItem="nZH-AQ-eKH" firstAttribute="leading" secondItem="ePj-sU-evL" secondAttribute="leading" constant="146" id="dz6-by-Ihd"/>
+                            <constraint firstItem="aJP-1K-2md" firstAttribute="width" secondItem="bKe-Ia-L6Y" secondAttribute="width" id="hNX-wu-TRT"/>
+                            <constraint firstItem="bKe-Ia-L6Y" firstAttribute="top" secondItem="ePj-sU-evL" secondAttribute="top" constant="20" id="l0f-HV-vvc"/>
+                            <constraint firstItem="aJP-1K-2md" firstAttribute="leading" secondItem="bKe-Ia-L6Y" secondAttribute="trailing" id="qMF-hA-zRe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ePj-sU-evL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="矩陣相乘" id="j01-th-f2N" userLabel="矩陣相乘"/>
+                    <connections>
+                        <outlet property="matrix1Label" destination="bKe-Ia-L6Y" id="3tf-MO-Hul"/>
+                        <outlet property="matrix2Label" destination="aJP-1K-2md" id="BW4-Zm-j67"/>
+                        <outlet property="matrix3Label" destination="ndK-XK-2f0" id="5BU-6c-VT6"/>
+                        <outlet property="startBtn" destination="nZH-AQ-eKH" id="eCd-Vi-ow4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8z1-ZP-hdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="275"/>
+        </scene>
+        <!--龜兔賽跑-->
+        <scene sceneID="V2F-5Z-QNY">
+            <objects>
+                <viewController id="qY4-e4-7yN" userLabel="龜兔賽跑" customClass="raceVC" customModule="Lab8_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3uI-gr-Uf6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="龜兔賽跑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNq-OK-YWc">
+                                <rect key="frame" x="20" y="44" width="101.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兔子" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rl7-Eh-9v4">
+                                <rect key="frame" x="20" y="124" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="烏龜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-b7-xMR">
+                                <rect key="frame" x="20" y="204" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TTK-re-Ndo" userLabel="rabbitProgress">
+                                <rect key="frame" x="100" y="138" width="294" height="2"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bBs-jO-Sym" userLabel="turtleProgress">
+                                <rect key="frame" x="100" y="218" width="294" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-Fg-hAs">
+                                <rect key="frame" x="20" y="284" width="374" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.19437320920000001" blue="0.63360281169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="開始"/>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="qY4-e4-7yN" eventType="touchUpInside" id="EYl-3h-vez"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hgH-Fg-hAs" firstAttribute="leading" secondItem="g58-4f-w86" secondAttribute="leading" constant="20" id="28h-zy-VGn"/>
+                            <constraint firstItem="g58-4f-w86" firstAttribute="trailing" secondItem="hgH-Fg-hAs" secondAttribute="trailing" constant="20" id="8hH-1L-Oz3"/>
+                            <constraint firstItem="bBs-jO-Sym" firstAttribute="leading" secondItem="3uI-gr-Uf6" secondAttribute="leadingMargin" constant="80" id="GuK-0k-eiC"/>
+                            <constraint firstItem="hgH-Fg-hAs" firstAttribute="top" secondItem="mlw-b7-xMR" secondAttribute="bottom" constant="50" id="Hb1-ZZ-ovi"/>
+                            <constraint firstItem="mlw-b7-xMR" firstAttribute="leading" secondItem="g58-4f-w86" secondAttribute="leading" constant="20" id="JS9-PJ-ws2"/>
+                            <constraint firstItem="g58-4f-w86" firstAttribute="trailing" secondItem="mlw-b7-xMR" secondAttribute="trailing" constant="343" id="L0c-7R-76d"/>
+                            <constraint firstItem="TTK-re-Ndo" firstAttribute="top" secondItem="SNq-OK-YWc" secondAttribute="bottom" constant="64" id="M2U-w5-F9A"/>
+                            <constraint firstItem="bBs-jO-Sym" firstAttribute="top" secondItem="TTK-re-Ndo" secondAttribute="bottom" constant="78" id="MOz-b7-2rC"/>
+                            <constraint firstItem="g58-4f-w86" firstAttribute="trailing" secondItem="rl7-Eh-9v4" secondAttribute="trailing" constant="343" id="NRi-pA-nLX"/>
+                            <constraint firstItem="rl7-Eh-9v4" firstAttribute="top" secondItem="SNq-OK-YWc" secondAttribute="bottom" constant="50" id="OS3-6i-Kwr"/>
+                            <constraint firstItem="TTK-re-Ndo" firstAttribute="leading" secondItem="3uI-gr-Uf6" secondAttribute="leadingMargin" constant="80" id="Q2K-eY-sPX"/>
+                            <constraint firstItem="TTK-re-Ndo" firstAttribute="trailing" secondItem="3uI-gr-Uf6" secondAttribute="trailingMargin" id="Wko-B2-o8k"/>
+                            <constraint firstItem="rl7-Eh-9v4" firstAttribute="leading" secondItem="g58-4f-w86" secondAttribute="leading" constant="20" id="Z15-Oh-0Ug"/>
+                            <constraint firstItem="SNq-OK-YWc" firstAttribute="top" secondItem="g58-4f-w86" secondAttribute="top" id="dxp-9u-33E"/>
+                            <constraint firstItem="SNq-OK-YWc" firstAttribute="leading" secondItem="g58-4f-w86" secondAttribute="leading" constant="20" id="eZC-al-Hk7"/>
+                            <constraint firstItem="mlw-b7-xMR" firstAttribute="top" secondItem="rl7-Eh-9v4" secondAttribute="bottom" constant="50" id="hmQ-84-81X"/>
+                            <constraint firstItem="bBs-jO-Sym" firstAttribute="trailing" secondItem="3uI-gr-Uf6" secondAttribute="trailingMargin" id="vYS-jK-Gt0"/>
+                            <constraint firstItem="g58-4f-w86" firstAttribute="trailing" secondItem="SNq-OK-YWc" secondAttribute="trailing" constant="292.5" id="xNf-9g-g5E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g58-4f-w86"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="龜兔賽跑" id="TBe-Qt-9qw" userLabel="龜兔賽跑"/>
+                    <connections>
+                        <outlet property="rabbitProgress" destination="TTK-re-Ndo" id="wKn-dV-Ksw"/>
+                        <outlet property="turtleProgress" destination="bBs-jO-Sym" id="Tin-Ix-GHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b93-z1-2F7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827.536231884058" y="-498.21428571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HCC-w1-TT8">
+            <objects>
+                <tabBarController id="9ag-x7-IRT" customClass="ViewController" customModule="Lab8_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vfp-PE-65T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qY4-e4-7yN" kind="relationship" relationship="viewControllers" id="58D-Py-ufN"/>
+                        <segue destination="MhO-fa-9eT" kind="relationship" relationship="viewControllers" id="4L7-tj-fgk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yc-VK-Emz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="-165"/>
+        </scene>
+    </scenes>
+</document>

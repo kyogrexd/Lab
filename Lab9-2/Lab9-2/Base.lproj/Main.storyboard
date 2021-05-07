@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TLO-ue-iUY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--畫面二-->
+        <scene sceneID="TBl-iZ-uyT">
+            <objects>
+                <viewController id="w5B-Fb-bWP" userLabel="畫面二" customClass="secondVC" customModule="Lab9_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MXo-JL-NQP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="畫面二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gg-pd-Pg4">
+                                <rect key="frame" x="169" y="79" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入要發送的訊息" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Q7-9H-biB">
+                                <rect key="frame" x="10" y="124" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFD-iw-BzX">
+                                <rect key="frame" x="161" y="193" width="92" height="30"/>
+                                <state key="normal" title="發送至畫面三"/>
+                                <connections>
+                                    <action selector="regionNotificationSend:" destination="w5B-Fb-bWP" eventType="touchUpInside" id="4Rp-Cg-j1L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50p-9N-EqH">
+                                <rect key="frame" x="145.5" y="258" width="123" height="30"/>
+                                <state key="normal" title="開啟系統鍵盤通知"/>
+                                <connections>
+                                    <action selector="registerKeyBoardNotification:" destination="w5B-Fb-bWP" eventType="touchUpInside" id="lKp-lT-IpK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="發送者： Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6ma-wt-Dyi">
+                                <rect key="frame" x="149.5" y="323" width="115.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訊息內容: Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-pd-M7H">
+                                <rect key="frame" x="147" y="378.5" width="120" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BJW-Kl-leR">
+                                <rect key="frame" x="154" y="434" width="106.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="50p-9N-EqH" firstAttribute="centerX" secondItem="MXo-JL-NQP" secondAttribute="centerX" id="29U-VX-WQy"/>
+                            <constraint firstItem="6ma-wt-Dyi" firstAttribute="top" secondItem="50p-9N-EqH" secondAttribute="bottom" constant="35" id="5D9-6j-Ay8"/>
+                            <constraint firstItem="xm4-pd-M7H" firstAttribute="centerX" secondItem="MXo-JL-NQP" secondAttribute="centerX" id="EYM-ec-8Ot"/>
+                            <constraint firstItem="1Q7-9H-biB" firstAttribute="leading" secondItem="JOy-r0-WbR" secondAttribute="leading" constant="10" id="FTP-g8-fwd"/>
+                            <constraint firstItem="3gg-pd-Pg4" firstAttribute="top" secondItem="JOy-r0-WbR" secondAttribute="top" constant="35" id="LPZ-rF-hKm"/>
+                            <constraint firstItem="ZFD-iw-BzX" firstAttribute="top" secondItem="1Q7-9H-biB" secondAttribute="bottom" constant="35" id="QJN-sQ-L4J"/>
+                            <constraint firstItem="BJW-Kl-leR" firstAttribute="top" secondItem="xm4-pd-M7H" secondAttribute="bottom" constant="35" id="Rd9-sd-IvZ"/>
+                            <constraint firstItem="6ma-wt-Dyi" firstAttribute="centerX" secondItem="MXo-JL-NQP" secondAttribute="centerX" id="TJN-QO-Z5k"/>
+                            <constraint firstItem="JOy-r0-WbR" firstAttribute="trailing" secondItem="1Q7-9H-biB" secondAttribute="trailing" constant="10" id="TKM-Ak-oQO"/>
+                            <constraint firstItem="3gg-pd-Pg4" firstAttribute="centerX" secondItem="MXo-JL-NQP" secondAttribute="centerX" id="U2K-L4-5qv"/>
+                            <constraint firstItem="50p-9N-EqH" firstAttribute="top" secondItem="ZFD-iw-BzX" secondAttribute="bottom" constant="35" id="ePc-zM-JS2"/>
+                            <constraint firstItem="BJW-Kl-leR" firstAttribute="centerX" secondItem="MXo-JL-NQP" secondAttribute="centerX" id="oq1-Tl-26p"/>
+                            <constraint firstItem="ZFD-iw-BzX" firstAttribute="centerX" secondItem="MXo-JL-NQP" secondAttribute="centerX" id="qyu-6s-oZh"/>
+                            <constraint firstItem="1Q7-9H-biB" firstAttribute="top" secondItem="3gg-pd-Pg4" secondAttribute="bottom" constant="15" id="tMh-LC-MPr"/>
+                            <constraint firstItem="xm4-pd-M7H" firstAttribute="top" secondItem="6ma-wt-Dyi" secondAttribute="bottom" constant="35" id="yGn-Qz-vWp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JOy-r0-WbR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="畫面二" id="IQ8-Fx-iWP" userLabel="畫面二"/>
+                    <connections>
+                        <outlet property="keyBoardBtn" destination="50p-9N-EqH" id="9ne-iL-V5H"/>
+                        <outlet property="msg" destination="xm4-pd-M7H" id="FCp-GM-EIN"/>
+                        <outlet property="msgTextField" destination="1Q7-9H-biB" id="oUJ-oK-Q8A"/>
+                        <outlet property="sender" destination="6ma-wt-Dyi" id="bVF-pG-ngW"/>
+                        <outlet property="timeLabel" destination="BJW-Kl-leR" id="55B-pe-33A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmj-GW-had" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.92753623188409" y="278.57142857142856"/>
+        </scene>
+        <!--畫面三-->
+        <scene sceneID="pCd-pB-xiB">
+            <objects>
+                <viewController id="rY4-cn-SA0" userLabel="畫面三" customClass="thirdVC" customModule="Lab9_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Erp-lg-EVk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="畫面三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-vN-u37">
+                                <rect key="frame" x="169" y="79" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="發送者: Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EKe-za-BTr">
+                                <rect key="frame" x="155.5" y="144" width="103" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訊息內容: Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hpt-t7-QJx">
+                                <rect key="frame" x="147" y="199.5" width="120" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0pC-6s-yAZ">
+                                <rect key="frame" x="154" y="255" width="106.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0pC-6s-yAZ" firstAttribute="centerX" secondItem="Erp-lg-EVk" secondAttribute="centerX" id="Brn-xM-ary"/>
+                            <constraint firstItem="0pC-6s-yAZ" firstAttribute="top" secondItem="Hpt-t7-QJx" secondAttribute="bottom" constant="35" id="FHF-KL-LLg"/>
+                            <constraint firstItem="Hpt-t7-QJx" firstAttribute="centerX" secondItem="Erp-lg-EVk" secondAttribute="centerX" id="JcC-jN-1kp"/>
+                            <constraint firstItem="zKj-vN-u37" firstAttribute="top" secondItem="5pK-gb-FFS" secondAttribute="top" constant="35" id="KeB-6Z-hks"/>
+                            <constraint firstItem="EKe-za-BTr" firstAttribute="centerX" secondItem="Erp-lg-EVk" secondAttribute="centerX" id="Wy8-2a-4I0"/>
+                            <constraint firstItem="zKj-vN-u37" firstAttribute="centerX" secondItem="Erp-lg-EVk" secondAttribute="centerX" id="csg-0z-ef7"/>
+                            <constraint firstItem="EKe-za-BTr" firstAttribute="top" secondItem="zKj-vN-u37" secondAttribute="bottom" constant="35" id="ml4-x7-c3W"/>
+                            <constraint firstItem="Hpt-t7-QJx" firstAttribute="top" secondItem="EKe-za-BTr" secondAttribute="bottom" constant="35" id="yEU-d6-hOM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5pK-gb-FFS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="畫面三" id="ykq-W4-4l2" userLabel="畫面三"/>
+                    <connections>
+                        <outlet property="msg" destination="Hpt-t7-QJx" id="LQI-2K-Ugn"/>
+                        <outlet property="sender" destination="EKe-za-BTr" id="yuN-JI-DhI"/>
+                        <outlet property="timeLabel" destination="0pC-6s-yAZ" id="Gnj-IQ-hil"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fl-tb-z35" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="946"/>
+        </scene>
+        <!--畫面一-->
+        <scene sceneID="9Xu-V7-qpC">
+            <objects>
+                <viewController id="ed6-L0-C3X" userLabel="畫面一" customClass="firstVC" customModule="Lab9_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8el-Xc-Z83">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="畫面一" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="woM-dx-BZ1">
+                                <rect key="frame" x="169" y="79" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2i-pr-2NP">
+                                <rect key="frame" x="161" y="144" width="92" height="30"/>
+                                <state key="normal" title="註冊全域通知"/>
+                                <connections>
+                                    <action selector="registerPublicNotification:" destination="ed6-L0-C3X" eventType="touchUpInside" id="QH1-Xo-cpP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEE-4S-hOM">
+                                <rect key="frame" x="176" y="209" width="62" height="30"/>
+                                <state key="normal" title="開始計時"/>
+                                <connections>
+                                    <action selector="startCount:" destination="ed6-L0-C3X" eventType="touchUpInside" id="lFg-vw-6ci"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mdp-mK-TRK">
+                                <rect key="frame" x="154" y="274" width="106.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mdp-mK-TRK" firstAttribute="top" secondItem="AEE-4S-hOM" secondAttribute="bottom" constant="35" id="0Cm-tE-tn2"/>
+                            <constraint firstItem="AEE-4S-hOM" firstAttribute="centerX" secondItem="8el-Xc-Z83" secondAttribute="centerX" id="C4Z-O6-lxv"/>
+                            <constraint firstItem="woM-dx-BZ1" firstAttribute="top" secondItem="koD-sy-x7T" secondAttribute="top" constant="35" id="KIZ-1r-PCb"/>
+                            <constraint firstItem="AEE-4S-hOM" firstAttribute="top" secondItem="m2i-pr-2NP" secondAttribute="bottom" constant="35" id="TFN-ER-wUY"/>
+                            <constraint firstItem="mdp-mK-TRK" firstAttribute="centerX" secondItem="8el-Xc-Z83" secondAttribute="centerX" id="Uvw-44-iHR"/>
+                            <constraint firstItem="woM-dx-BZ1" firstAttribute="centerX" secondItem="8el-Xc-Z83" secondAttribute="centerX" id="bQN-Bf-73i"/>
+                            <constraint firstItem="m2i-pr-2NP" firstAttribute="centerX" secondItem="8el-Xc-Z83" secondAttribute="centerX" id="e8r-yr-JfS"/>
+                            <constraint firstItem="m2i-pr-2NP" firstAttribute="top" secondItem="woM-dx-BZ1" secondAttribute="bottom" constant="35" id="g83-Zo-omT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="koD-sy-x7T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="畫面一" id="Rer-8p-mam" userLabel="畫面一"/>
+                    <connections>
+                        <outlet property="registerBtn" destination="m2i-pr-2NP" id="tBR-Q6-yg7"/>
+                        <outlet property="startTimeBtn" destination="AEE-4S-hOM" id="jw0-uf-jQY"/>
+                        <outlet property="timeLabel" destination="mdp-mK-TRK" id="eOe-tC-5x7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFO-CL-IMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.92753623188409" y="-392.41071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gHD-Zs-75M">
+            <objects>
+                <tabBarController id="TLO-ue-iUY" customClass="ViewController" customModule="Lab9_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cBb-4x-KJi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ed6-L0-C3X" kind="relationship" relationship="viewControllers" id="WCp-Dx-FcD"/>
+                        <segue destination="w5B-Fb-bWP" kind="relationship" relationship="viewControllers" id="2RT-bB-PRn"/>
+                        <segue destination="rY4-cn-SA0" kind="relationship" relationship="viewControllers" id="tdL-p2-EtF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZF-6c-ZqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-672" y="-68"/>
+        </scene>
+    </scenes>
+</document>
