@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tVA-0K-9Kg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--縮放功能-->
+        <scene sceneID="zcu-sx-Qhs">
+            <objects>
+                <viewController id="tVA-0K-9Kg" userLabel="縮放功能" customClass="zoomingVC" customModule="Lab5_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxx-me-1LB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="hIR-iP-bDf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-SB-nCS" userLabel="myView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <connections>
+                                            <segue destination="ZAT-9l-Xrj" kind="embed" id="ozz-gS-eUI"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="u9s-5U-ca6" firstAttribute="bottom" secondItem="uhV-SB-nCS" secondAttribute="bottom" id="6Mh-bf-qz8"/>
+                                    <constraint firstItem="u9s-5U-ca6" firstAttribute="trailing" secondItem="uhV-SB-nCS" secondAttribute="trailing" id="caa-xe-kYC"/>
+                                    <constraint firstItem="uhV-SB-nCS" firstAttribute="top" secondItem="u9s-5U-ca6" secondAttribute="top" id="fNb-rK-wad"/>
+                                    <constraint firstItem="uhV-SB-nCS" firstAttribute="height" secondItem="u9s-5U-ca6" secondAttribute="height" id="jgu-wh-z2a"/>
+                                    <constraint firstItem="uhV-SB-nCS" firstAttribute="width" secondItem="u9s-5U-ca6" secondAttribute="width" id="l0c-KM-hhv"/>
+                                    <constraint firstItem="uhV-SB-nCS" firstAttribute="leading" secondItem="u9s-5U-ca6" secondAttribute="leading" id="lKS-B7-rJu"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZPA-Cr-IiT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="u9s-5U-ca6"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tVA-0K-9Kg" id="A3I-ur-IBj"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hIR-iP-bDf" firstAttribute="trailing" secondItem="f3x-hz-Fso" secondAttribute="trailing" id="20z-iV-xJL"/>
+                            <constraint firstItem="hIR-iP-bDf" firstAttribute="leading" secondItem="f3x-hz-Fso" secondAttribute="leading" id="AIs-05-nHZ"/>
+                            <constraint firstItem="hIR-iP-bDf" firstAttribute="top" secondItem="f3x-hz-Fso" secondAttribute="top" id="KmZ-G9-Xgr"/>
+                            <constraint firstItem="hIR-iP-bDf" firstAttribute="bottom" secondItem="f3x-hz-Fso" secondAttribute="bottom" id="kRB-OI-tiS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f3x-hz-Fso"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="縮放功能" image="square.grid.2x2.fill" catalog="system" id="Ijp-Cs-Ekl" userLabel="縮放功能"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="uhV-SB-nCS" id="m94-5d-f6D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ro6-XB-bbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="184.82142857142856"/>
+        </scene>
+        <!--Zooming ContainerVC-->
+        <scene sceneID="AiA-Hq-JvO">
+            <objects>
+                <viewController id="ZAT-9l-Xrj" customClass="zoomingContainerVC" customModule="Lab5_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5p4-dc-KMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="１" translatesAutoresizingMaskIntoConstraints="NO" id="8Sg-6x-mGg">
+                                <rect key="frame" x="38" y="414" width="339" height="229"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="２" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-oR-vk6">
+                                <rect key="frame" x="100" y="44" width="215.5" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0GZ-Jg-wPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-946.37681159420299" y="276.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="１" width="517.5" height="356.5"/>
+        <image name="２" width="215.5" height="351"/>
+    </resources>
+</document>

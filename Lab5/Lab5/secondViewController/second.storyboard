@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pEY-Zu-nvA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--縮放功能-->
+        <scene sceneID="p7G-IN-Dkr">
+            <objects>
+                <viewController id="pEY-Zu-nvA" customClass="secondViewController" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yAG-gj-hDR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-QW-rfY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-gt-gJk" userLabel="第一頁">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-Nf-E4M">
+                                                <rect key="frame" x="184" y="374" width="46" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="iln-Nf-E4M" firstAttribute="centerX" secondItem="nf6-gt-gJk" secondAttribute="centerX" id="Zhv-P1-A3F"/>
+                                            <constraint firstItem="iln-Nf-E4M" firstAttribute="centerY" secondItem="nf6-gt-gJk" secondAttribute="centerY" id="s25-aG-fM5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3n-OH-8E2" userLabel="第二頁">
+                                        <rect key="frame" x="414" y="0.0" width="414" height="769"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-bJ-jYf">
+                                                <rect key="frame" x="182.5" y="374" width="49" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="h5b-bJ-jYf" firstAttribute="centerY" secondItem="g3n-OH-8E2" secondAttribute="centerY" id="r0P-gS-gDH"/>
+                                            <constraint firstItem="h5b-bJ-jYf" firstAttribute="centerX" secondItem="g3n-OH-8E2" secondAttribute="centerX" id="uSL-dt-kZ2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g3n-OH-8E2" firstAttribute="height" secondItem="nf6-gt-gJk" secondAttribute="height" id="1OX-I7-Zfc"/>
+                                    <constraint firstItem="g3n-OH-8E2" firstAttribute="top" secondItem="PNj-ca-Ohi" secondAttribute="top" id="FdS-Ri-m1g"/>
+                                    <constraint firstItem="g3n-OH-8E2" firstAttribute="width" secondItem="nf6-gt-gJk" secondAttribute="width" id="MO2-Rf-phl"/>
+                                    <constraint firstItem="g3n-OH-8E2" firstAttribute="width" secondItem="pf6-IT-weU" secondAttribute="width" id="OLF-sC-du5"/>
+                                    <constraint firstItem="PNj-ca-Ohi" firstAttribute="bottom" secondItem="nf6-gt-gJk" secondAttribute="bottom" id="OlU-C0-Uzb"/>
+                                    <constraint firstItem="nf6-gt-gJk" firstAttribute="top" secondItem="PNj-ca-Ohi" secondAttribute="top" id="S80-Na-TzR"/>
+                                    <constraint firstItem="g3n-OH-8E2" firstAttribute="leading" secondItem="nf6-gt-gJk" secondAttribute="trailing" id="Und-ym-m5v"/>
+                                    <constraint firstItem="PNj-ca-Ohi" firstAttribute="trailing" secondItem="g3n-OH-8E2" secondAttribute="trailing" id="V0X-pX-ww8"/>
+                                    <constraint firstItem="g3n-OH-8E2" firstAttribute="height" secondItem="pf6-IT-weU" secondAttribute="height" id="YHm-7n-fP5"/>
+                                    <constraint firstItem="nf6-gt-gJk" firstAttribute="leading" secondItem="PNj-ca-Ohi" secondAttribute="leading" id="oG5-vz-D6G"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PNj-ca-Ohi"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pf6-IT-weU"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sTf-QW-rfY" firstAttribute="trailing" secondItem="tT6-Km-758" secondAttribute="trailing" id="1x0-g8-slV"/>
+                            <constraint firstItem="sTf-QW-rfY" firstAttribute="leading" secondItem="tT6-Km-758" secondAttribute="leading" id="4oR-8L-uxb"/>
+                            <constraint firstItem="sTf-QW-rfY" firstAttribute="bottom" secondItem="tT6-Km-758" secondAttribute="bottom" id="VLz-pI-ADA"/>
+                            <constraint firstItem="sTf-QW-rfY" firstAttribute="top" secondItem="tT6-Km-758" secondAttribute="top" id="mON-q8-pwi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tT6-Km-758"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="縮放功能" image="paperplane.fill" catalog="system" id="59V-Fc-blz"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ume-rz-iwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

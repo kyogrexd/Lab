@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab1_HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入玩家姓名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNw-E4-iF3">
+                                <rect key="frame" x="10" y="64" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ino-Mi-YBc">
+                                <rect key="frame" x="138.5" y="138.5" width="137" height="32"/>
+                                <segments>
+                                    <segment title="剪刀"/>
+                                    <segment title="石頭"/>
+                                    <segment title="布"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-gy-CqB">
+                                <rect key="frame" x="191.5" y="179.5" width="31" height="30"/>
+                                <state key="normal" title="猜拳"/>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3F-g7-aFt"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-nZ-jm8">
+                                <rect key="frame" x="68" y="219.5" width="278" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dt-e0-0IQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我方出拳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-DJ-tXR">
+                                        <rect key="frame" x="69.5" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝利者" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjP-ro-qNJ">
+                                        <rect key="frame" x="139" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電腦出拳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87y-1H-hp9">
+                                        <rect key="frame" x="208.5" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入姓名以開始遊戲" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-aa-5s6">
+                                <rect key="frame" x="129" y="108" width="156" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bKC-aa-5s6" firstAttribute="top" secondItem="mNw-E4-iF3" secondAttribute="bottom" constant="41" id="GxX-zF-sJx"/>
+                            <constraint firstItem="mNw-E4-iF3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NUF-ST-tyg"/>
+                            <constraint firstItem="Atg-gy-CqB" firstAttribute="top" secondItem="Ino-Mi-YBc" secondAttribute="bottom" constant="137" id="Ueq-B8-fbq"/>
+                            <constraint firstItem="mNw-E4-iF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Xcl-uU-mIe"/>
+                            <constraint firstItem="Ino-Mi-YBc" firstAttribute="top" secondItem="bKC-aa-5s6" secondAttribute="bottom" constant="10" id="d8Y-5H-ssp"/>
+                            <constraint firstItem="bKC-aa-5s6" firstAttribute="top" secondItem="mNw-E4-iF3" secondAttribute="bottom" constant="10" id="iRt-Xz-jIz"/>
+                            <constraint firstItem="Atg-gy-CqB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lCE-Zk-say"/>
+                            <constraint firstItem="Ino-Mi-YBc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nPH-DT-Dyg"/>
+                            <constraint firstItem="bKC-aa-5s6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oMe-Tg-Rz8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mNw-E4-iF3" secondAttribute="trailing" constant="10" id="tb3-iw-yEN"/>
+                            <constraint firstItem="Atg-gy-CqB" firstAttribute="top" secondItem="Ino-Mi-YBc" secondAttribute="bottom" constant="10" id="txe-8g-Ug2"/>
+                            <constraint firstItem="Bx5-nZ-jm8" firstAttribute="top" secondItem="Atg-gy-CqB" secondAttribute="bottom" constant="10" id="xEr-R5-NEo"/>
+                            <constraint firstItem="Bx5-nZ-jm8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yc7-H2-cUN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mySelectLabel" destination="qLw-DJ-tXR" id="p4R-00-58c"/>
+                        <outlet property="nameField" destination="mNw-E4-iF3" id="JXE-cV-5ny"/>
+                        <outlet property="nameLabel" destination="9dt-e0-0IQ" id="Hjf-Qi-G8Y"/>
+                        <outlet property="pcSelectLabel" destination="87y-1H-hp9" id="2L4-0Y-Wcd"/>
+                        <outlet property="textLabel" destination="bKC-aa-5s6" id="cb0-pr-7Jb"/>
+                        <outlet property="userSelectSegment" destination="Ino-Mi-YBc" id="qmh-U7-6SF"/>
+                        <outlet property="winnerLabel" destination="hjP-ro-qNJ" id="KhN-iW-mIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="121.875"/>
+        </scene>
+    </scenes>
+</document>
