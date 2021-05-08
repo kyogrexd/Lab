@@ -6,5 +6,5 @@ target 'Lab11' do
   use_frameworks!
 
   # Pods for Lab11
-  pod 'Toast'
+  pod "Toast"
 end
